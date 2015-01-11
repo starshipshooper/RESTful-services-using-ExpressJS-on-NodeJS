@@ -1,0 +1,57 @@
+
+body {
+  /*color: white;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /*background-image: url(""); */
+  background-size:cover;
+
+
+}
+
+a {
+  color: #grey;
+}
+
+.dropshadowme {
+  -webkit-box-shadow: 11px 7px 65px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 11px 7px 65px -3px rgba(0,0,0,0.75);
+  box-shadow: 11px 7px 65px -3px rgba(0,0,0,0.75);
+}
+
+.borderRoundme {
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  border: 0px solid #000000;
+}
+
+.nav {
+  padding: 10px;
+}
+
+.logo{
+  background-color: crimson;
+  color: white;
+  padding:30px;
+  font-size: 30px;
+}
+.shelfcard{
+  background-color: white;
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  border: 0px solid #000000;
+}
+table {
+  border-collapse: separate;
+  padding: 20px;
+  border-spacing: 20px;
+}
+
+/*.movieResultRow {
+
+  outline-style: solid;
+  outline-color: grey;
+  outline-width: thin;
+  width: 100%;
+}*/

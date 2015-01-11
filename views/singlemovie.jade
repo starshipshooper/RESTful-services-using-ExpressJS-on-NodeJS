@@ -1,0 +1,8 @@
+extends layout
+block content
+    if (user)
+    p You are currently logged in as #{user.username} #{user.id}
+    a(href="/logout") Logout
+    if (movie)
+    each singleMovie in movie
+      h1 #{singleMovie.title}

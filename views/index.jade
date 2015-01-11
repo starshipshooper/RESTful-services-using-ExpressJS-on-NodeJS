@@ -1,0 +1,18 @@
+extends layout
+block content
+  if(user)
+    div(class='container' style='margin-top: 100px;')
+      h1 explore...
+      form(role='form', action="/api/movies/find",method="get", style='max-width: 300px;')
+        .form-group
+            input.form-control(type='text', name='title' placeholder='Title here..')
+        button(class="btn btn-danger" type='submit') find movie
+  if(!user)
+    div(class='container' style='margin-top: 100px;')
+     div(class='container' style='')
+      h1
+        p 'Oh yea, I forgot to watch that movie!'
+        small A lot of us are too busy. We need to be reminded to watch certain things. Pin a film to be reminded of it.
+        p
+        p Most of us watch movies that our friends recommend.
+        small  Pinflik lets you see what your friends think about a film, and what they recommend.

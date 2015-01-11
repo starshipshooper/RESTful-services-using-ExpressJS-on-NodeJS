@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/carousel.css')
+
+  body(style=(background ? 'color: white; background: cover; background-image: url('+background+')' : ''))
+      nav.navbar.navbar-default.navbar-fixed-top(style='background-color:white;')
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+              span.sr-only Toggle navigation
+
+              span.icon-bar
+
+              span.icon-bar
+
+              span.icon-bar
+
+            a.logo.navbar-brand(href='#' style='height: 100%; color: white;') PINflik
+
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav.navbar-right
+              if (!user)
+                li
+                  a(href='/login') Login
+
+                li
+                  a(href='/register') register
+              if (user)
+                li
+                  a(href='/pinlist') My pin list
+
+                li
+                  a(href='/') Explore
+
+                li
+                  a(href='/logout') Logout
+
+          // /.nav-collapse
+    span(style='margin-bottom: 500px;') p
+    block content

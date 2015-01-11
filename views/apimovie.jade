@@ -1,0 +1,29 @@
+extends layout
+block content
+  if (!posterError)
+
+  hr.featurette-divider
+  div(class='container')
+    .row.featurette
+      .col-md-9
+        h2.featurette-heading #{movielist.Title}
+            span.text-muted (#{movielist.Year})
+        p.lead  #{movielist.Plot}
+        .embed-responsive.embed-responsive-16by9
+          iframe.embed-responsive-item(src='https://www.youtube.com/embed/'+youtubeid+'?autoplay=1')
+
+
+      .col-md-3(style='padding-left: 50px;')
+        img.dropshadowme.borderRoundme.featurette-image.img-responsive(src=movielist.Poster style='margin-bottom:30px;margin-top:200px;')
+        span(class='text-muted' ) #{movielist.Genre}
+        h1(class='text-muted' style='margin-left:85px;') #{movielist.Metascore}%
+        form(action='/pinlist' method='post')
+          input(type='hidden', name='title', value=movielist.Title)
+          input(type='hidden', name='poster', value=movielist.Poster)
+          input(type='hidden', name='year', value=movielist.Year)
+          if (!pinnedAlready)
+            button(class='btn btn-warning' type='submit' ) remind me
+          else
+            a(href='/pinlist')
+              label(class='btn btn-success') You've pinned this already
+    hr.featurette-divider
